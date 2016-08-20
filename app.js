@@ -69,6 +69,8 @@ bot.dialog('/', function (session) {
 		session.send('Богдан ебашь работу!');
 	}else if(session.message.text.toLowerCase().contains('sigma')){
 		session.send('Best team in the world!');
+	}else if(session.message.text.toLowerCase().contains('Dan')){
+		session.send('Hi Dan! How are you?');
 	}else{
 		session.send('Sorry I don\'t understand you...');
 	}

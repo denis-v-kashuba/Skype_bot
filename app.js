@@ -19,6 +19,7 @@ var methodOverride 			= ServiceLocatorObj.get('method-override');
 var session					= ServiceLocatorObj.get('express-session');
 var passport				= ServiceLocatorObj.get('passport');
 var flash 	 				= ServiceLocatorObj.get('connect-flash');
+var MongoStore 				= ServiceLocatorObj.get('connect-mongo')(session);
 
 var config		        	= ServiceLocatorObj.get('/server/config/config');
 var LoggerObj		        = ServiceLocatorObj.get('/server/config/logger', true);
@@ -156,7 +157,7 @@ app.use('/server', express.static(__dirname + '/app'));
  */
 
 app.listen(app.get('port'), function () {
-	LoggerObj.logIntel("Willow server listening on port " + app.get('port'), 'info');
+	LoggerObj.logIntel(config.get('application:name') + " server listening on port " + app.get('port'), 'info');
 });
 
 /**

@@ -3,6 +3,8 @@
   "views_path" : "/server/views",
   "static_path" : "/dist",
   "secret" : "secrethere",
+  "port": "3000",
+  "bot_port": "3978",
   "mongoose": {
     "uri": "mongodb://localhost/spy-phoenix"
   },
@@ -13,7 +15,7 @@
     "name" : "Spy-phoenix"
   },
   "azure" : {
-    "appId" : "ad73e3d9-da5b-4b99-ac7b-6f837cd3d0a6",
-    "appPassword" : "wwdGEY76Fwz20zJyrUem0tU"
+    "appId" : "de95c68d-5bb7-4434-8a90-231e6b493cb6",
+    "appPassword" : "qF3sP4VTJhXQg8Eo9fBC62b"
   }
 }

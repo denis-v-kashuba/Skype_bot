@@ -1,0 +1,19 @@
+{
+  "cacheMS" : 4200000,
+  "views_path" : "/server/views",
+  "static_path" : "/dist",
+  "secret" : "secrethere",
+  "mongoose": {
+    "uri": "mongodb://localhost/spy-phoenix"
+  },
+  "socketserver" : {
+    "port" : 10100
+  },
+  "application" : {
+    "name" : "Spy-phoenix"
+  },
+  "azure" : {
+    "appId" : "ad73e3d9-da5b-4b99-ac7b-6f837cd3d0a6",
+    "appPassword" : "wwdGEY76Fwz20zJyrUem0tU"
+  }
+}

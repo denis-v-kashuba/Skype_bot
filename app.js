@@ -65,6 +65,8 @@ bot.dialog('/', function (session) {
 		session.send('How can I help you?');
 	}else if(session.message.text.toLowerCase().contains('bogdan')) {
 		session.send('Работай лучше!');
+	}else if(session.message.text.toLowerCase().contains('bogdanebash')){
+		session.send('Богдан ебашь работу!');
 	}else if(session.message.text.toLowerCase().contains('simga')){
 		session.send('Best team in the world!');
 	}else{

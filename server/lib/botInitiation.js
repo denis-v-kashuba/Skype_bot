@@ -13,6 +13,8 @@ var mongoose = ServiceLocatorObj.get('/server/lib/mongoose.js');
 var restify	= ServiceLocatorObj.get('restify');
 var builder	= ServiceLocatorObj.get('botbuilder');
 
+var Pointer = ServiceLocatorObj.get('/server/lib/pointer.js', true);
+
 LoggerObj.logIntel('_!_!_!_!_!_ Started log initiation !!!', 'info');
 
 
@@ -50,10 +52,16 @@ bot.on('contactRelationUpdate', function (message) {
 });
 
 bot.on('typing', function (message) {
+
+	LoggerObj.logIntel('_!_!_!_!_!_ User is typing !!!', 'info');
+
 	// User is typing
 });
 
 bot.on('deleteUserData', function (message) {
+
+	LoggerObj.logIntel('_!_!_!_!_!_ deleteUserData !!!', 'info');
+
 	// User asked to delete their data
 });
 
@@ -64,12 +72,11 @@ String.prototype.contains = function(content){
 	return this.indexOf(content) !== -1;
 }
 
-console.log(bot);
+//console.log(bot);
 
 bot.dialog('/', function (session) {
 
-	console.log(session);
-	console.log(session.message.text.toLowerCase());
+	Pointer.process(session);
 
 	//if(session.message.text.toLowerCase().contains('hello')){
 	//	session.send('Hey, How are you?');

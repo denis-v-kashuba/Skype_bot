@@ -15,11 +15,12 @@
 var path 	= require('path');
 var appDir 	= path.dirname(require.main.filename);
 
+var factories = {};
+
 function ServiceLocator() {
 
 	var rootDirectory = appDir;
 	var dependencies = {};
-	var factories = {};
 	var serviceLocator = {};
 
 	serviceLocator.factory = function (name, factory) {
@@ -78,7 +79,6 @@ ServiceLocatorObj.factory('default', function(moduleName, rootDirectory, object,
 
 		if (moduleName.charAt(0) === '.')
 			moduleName = moduleName.substring(1);
-
 
 		if (object === true) {
 

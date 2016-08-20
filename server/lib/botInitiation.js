@@ -5,17 +5,17 @@
 
 var ServiceLocatorObj = require('./serviceLocator');
 
-var LoggerObj = ServiceLocatorObj.get('/server/config/logger', true);
+//var LoggerObj = ServiceLocatorObj.get('/server/config/logger', true);
 var config = ServiceLocatorObj.get('/server/config/config');
 
-var mongoose = ServiceLocatorObj.get('/server/lib/mongoose.js');
+//var mongoose = ServiceLocatorObj.get('/server/lib/mongoose.js');
 
 var restify	= ServiceLocatorObj.get('restify');
 var builder	= ServiceLocatorObj.get('botbuilder');
 
-var Pointer = ServiceLocatorObj.get('/server/lib/pointer.js', true);
-
-LoggerObj.logIntel('_!_!_!_!_!_ Started log initiation !!!', 'info');
+//var Pointer = ServiceLocatorObj.get('/server/lib/pointer.js', true);
+//
+//LoggerObj.logIntel('_!_!_!_!_!_ Started log initiation !!!', 'info');
 
 
 //=========================================================
@@ -53,14 +53,14 @@ bot.on('contactRelationUpdate', function (message) {
 
 bot.on('typing', function (message) {
 
-	LoggerObj.logIntel('_!_!_!_!_!_ User is typing !!!', 'info');
+	//LoggerObj.logIntel('_!_!_!_!_!_ User is typing !!!', 'info');
 
 	// User is typing
 });
 
 bot.on('deleteUserData', function (message) {
 
-	LoggerObj.logIntel('_!_!_!_!_!_ deleteUserData !!!', 'info');
+	//LoggerObj.logIntel('_!_!_!_!_!_ deleteUserData !!!', 'info');
 
 	// User asked to delete their data
 });
@@ -76,22 +76,22 @@ String.prototype.contains = function(content){
 
 bot.dialog('/', function (session) {
 
-	Pointer.process(session);
+	//Pointer.process(session);
 
-	//if(session.message.text.toLowerCase().contains('hello')){
-	//	session.send('Hey, How are you?');
-	//}else if(session.message.text.toLowerCase().contains('help')){
-	//	session.send('How can I help you?');
-	//}else if(session.message.text.toLowerCase().contains('bogdan')) {
-	//	session.send('Работай лучше!');
-	//}else if(session.message.text.toLowerCase().contains('ebsh')){
-	//	session.send('Богдан ебашь работу!');
-	//}else if(session.message.text.toLowerCase().contains('sigma')){
-	//	session.send('Best team in the world!');
-	//}else if(session.message.text.toLowerCase().contains('Dan')){
-	//	session.send('Hi Dan! How are you?');
-	//}else{
-	//	session.send('Sorry I don\'t understand you...');
-	//}
+	if(session.message.text.toLowerCase().contains('hello')){
+		session.send('Hey, How are you?');
+	}else if(session.message.text.toLowerCase().contains('help')){
+		session.send('How can I help you?');
+	}else if(session.message.text.toLowerCase().contains('bogdan')) {
+		session.send('Работай лучше!');
+	}else if(session.message.text.toLowerCase().contains('ebsh')){
+		session.send('Богдан ебашь работу!');
+	}else if(session.message.text.toLowerCase().contains('sigma')){
+		session.send('Best team in the world!');
+	}else if(session.message.text.toLowerCase().contains('Dan')){
+		session.send('Hi Dan! How are you?');
+	}else{
+		session.send('Sorry I don\'t understand you...');
+	}
 
 });

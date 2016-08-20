@@ -42,9 +42,9 @@ var Pointer = function () {
 
 					var citrus = splittedStringArray.slice(markerNum+1, (splittedStringArray.length - markerNum));
 
-					console.log(splittedStringArray.length);
-					console.log(markerNum);
-					console.log(citrus);
+					//console.log(splittedStringArray.length);
+					//console.log(markerNum);
+					//console.log(citrus);
 
 					var saveObj = {};
 					saveObj['themes'] = {};

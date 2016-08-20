@@ -135,13 +135,13 @@ app.use(function(req, res, next){
  *
  */
 
-var router = express.Router();
-var routes = require('./server/routes')(router);
-app.use('/', router);
-
-app.use(express.static(__dirname + '/app'));
-app.use('/app', express.static(__dirname + '/app'));
-app.use('/server', express.static(__dirname + '/app'));
+//var router = express.Router();
+//var routes = require('./server/routes')(router);
+//app.use('/', routes);
+//
+//app.use(express.static(__dirname + '/app'));
+//app.use('/app', express.static(__dirname + '/app'));
+//app.use('/server', express.static(__dirname + '/app'));
 
 /**
  *

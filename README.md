@@ -1,1 +1,1 @@
-# Love2
+# Love2 - framework

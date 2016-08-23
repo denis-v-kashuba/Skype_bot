@@ -99,7 +99,7 @@ app.use(passport.session());
 
 LoggerObj.logIntel(config.get('views_path'));
 
-app.set('port', process.env.PORT || 3000);
+app.set('port', process.env.PORT || config.get('port'));
 app.set('views', __dirname + config.get('views_path'));
 app.set('view engine', 'ejs'); // set up ejs for templating
 

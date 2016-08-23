@@ -3,17 +3,14 @@
   "views_path" : "/server/views",
   "static_path" : "/dist",
   "secret" : "secrethere",
+  "port": 3000,
   "mongoose": {
-    "uri": "mongodb://localhost/spy-phoenix"
+    "uri": "mongodb://localhost/love2"
   },
   "socketserver" : {
     "port" : 10100
   },
   "application" : {
-    "name" : "Spy-phoenix"
-  },
-  "azure" : {
-    "appId" : "ad73e3d9-da5b-4b99-ac7b-6f837cd3d0a6",
-    "appPassword" : "wwdGEY76Fwz20zJyrUem0tU"
+    "name" : "Love2"
   }
 }

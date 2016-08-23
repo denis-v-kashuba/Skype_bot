@@ -3,11 +3,12 @@ var ServiceLocatorObj = require('../lib/serviceLocator');
 var async = ServiceLocatorObj.get('async');
 var _ = ServiceLocatorObj.get('underscore');
 
+var AuthRoutes = ServiceLocatorObj.get('/server/routes/auth/auth.js');
+var AboutRoutes = ServiceLocatorObj.get('/server/routes/about/about.js');
 
 var Routes = [];
-
-//var AuthRoutes = ServiceLocatorObj.get('/server/routes/auth/auth.js');
-//combineInto(AuthRoutes, Routes);
+combineInto(AuthRoutes, Routes);
+combineInto(AboutRoutes, Routes);
 
 
 module.exports = function(app) {
